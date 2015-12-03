@@ -119,7 +119,7 @@ Read more about the `lang`` attribute [in the spec](http://www.w3.org/html/wg/dr
 Please keep in mind that the charset declaration:
 
 - must be included completely [within the first 1024 bytes of the document](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)
-- should be specified as early as possible (before any content that could be controlled by an attacker, such as a <title> element) in order to avoid a potential [encoding-related security issue](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7) in Internet Explorer
+- should be specified as early as possible (before any content that could be controlled by an attacker, such as a `title` element) in order to avoid a potential [encoding-related security issue](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7) in Internet Explorer
 
 ```html
 <html lang="en-us">
@@ -133,7 +133,7 @@ Internet Explorer supports the use of a document compatibility `meta`` tag to sp
 
 For more information, [read this awesome Stack Overflow article](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e).
 
-Keep in mind that the tag for compatibility mode needs to be included [before all other tags](https://msdn.microsoft.com/en-us/library/cc288325.aspx) except for the <title> and the other <meta> tags.
+Keep in mind that the tag for compatibility mode needs to be included [before all other tags](https://msdn.microsoft.com/en-us/library/cc288325.aspx) except for the `title` and the other `meta` tags.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />

@@ -13,7 +13,7 @@ Most of the rules in this style guide are based on our own experiences with writ
 - [Syntax and whitespace](#syntax-and-whitespace)
 	- [Write lowercase tags](#write-lowercase-tags)
 	- [Use tabs for indentation](#use-tabs-for-indentation)
-	- [Use double quotes on attributes](#use-double-quotes-on-attributes)
+	- [Use single quotes on attributes](#use-single-quotes-on-attributes)
 	- [Properly close void elements](#properly-close-void-elements)
 	- [Don't omit optional closing tags](#dont-omit-optional-closing-tags)
 	- [Don't omit optional tags](#dont-omit-optional-tags)
@@ -52,14 +52,17 @@ The following rules apply:
 </div>
 ```
 
-### Use double quotes on attributes
+### Use single quotes on attributes
+
+Even though most style guides advise to use double quotes, we are stubborn and use single quotes. The reason is simple: we use single quotes in other languages (PHP, Javascript) and want to be consistent. Mixing double and single quotes becomes confusing in contexts where different languages meet eachother (for example in a Twig environment).
 
 ```html
 <!-- bad -->
-<img src='path/to/file.jpg' alt='A beautiful file' />
+<img src="path/to/file.jpg" alt="A beautiful file" />
 
 <!-- good -->
-<img src="path/to/file.jpg" alt="A beautiful file" />
+<img src='path/to/file.jpg' alt='A beautiful file' />
+<img src='path/to/file.jpg' alt="It's a beautiful file" />
 ```
 
 ### Properly close void elements

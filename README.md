@@ -8,6 +8,22 @@ Most of the rules in this style guide are based on our own experiences with writ
 - [Mozilla's Webdev Bootcamp documentation](http://mozweb.readthedocs.org/en/latest/)
 - [html5boilerplate.com](https://html5boilerplate.com/)
 
+## Table of Contents
+
+- [Syntax and whitespace](#syntax-and-whitespace)
+	- [Write lowercase tags](#write-lowercase-tags)
+	- [Use tabs for indentation](#use-tabs-for-indentation)
+	- [Use double quotes on attributes](#use-double-quotes-on-attributes)
+	- [Properly close void elements](#properly-close-void-elements)
+	- [Don't omit optional closing tags](#dont-omit-optional-closing-tags)
+	- [Don't omit optional tags](#dont-omit-optional-tags)
+- [Naming convention](#naming-convention)
+- [Doctype](#doctype)
+- [Language](#language)
+- [IE Compatibility mode](#ie-compatibility-mode)
+- [Character encoding](#character-encoding)
+- [Validation](#validation)
+
 ## Syntax and whitespace
 
 The following rules apply:

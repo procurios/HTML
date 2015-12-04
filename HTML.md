@@ -71,10 +71,10 @@ Yes, even though trailing slashes optional. We just prefer closure, I guess. :)
 
 ```html
 <!-- bad -->
-<img src='path/to/file.jpg' alt='A beautiful file'>
+<img src="path/to/file.jpg" alt="A beautiful file">
 
 <!-- good -->
-<img src="path/to/file.jpg" alt="A beautiful file" />
+<img src='path/to/file.jpg' alt='A beautiful file' />
 ```
 
 ### Don't omit optional closing tags

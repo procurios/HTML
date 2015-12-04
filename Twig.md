@@ -45,7 +45,9 @@ This applies to the following:
 {{ true ? true : false }}
 ```
 
-### Don't put any spaces before and after the following operators: `|`, `.`, `..`, `[]`
+#### Exceptions
+
+Don't put any spaces (before or after) the operators `|`, `.`, `..`, `[]`.
 
 ```twig
 {{ foo|upper|lower }}

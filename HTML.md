@@ -67,11 +67,11 @@ Even though most style guides advise to use double quotes, we are stubborn and u
 
 ### Properly close void elements
 
-Yes, even though trailing slashes optional. We just prefure closure, I guess. :)
+Yes, even though trailing slashes optional. We just prefer closure, I guess. :)
 
 ```html
 <!-- bad -->
-<img src="path/to/file.jpg" alt="A beautiful file">
+<img src='path/to/file.jpg' alt='A beautiful file'>
 
 <!-- good -->
 <img src="path/to/file.jpg" alt="A beautiful file" />
@@ -117,7 +117,7 @@ Yes, even though trailing slashes optional. We just prefure closure, I guess. :)
 
 ## Naming convention
 
-We use a BEM-like naming convention for the value of `class` attributes. Read the naming section in our [CSS style guide](https://github.com/procurios/CSS#naming-conventions) for more information.
+We use a BEM-like naming convention for the value of `class` attributes. Read more about our naming section [here](BEM.md).
 
 ## Doctype
 
@@ -133,7 +133,7 @@ Always include the `lang` attribute on the `html` tag. From the HTML5 spec:
 
 > Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 
-Read more about the `lang`` attribute [in the spec](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element).
+Read more about the `lang` attribute [in the spec](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element).
 
 Please keep in mind that the charset declaration:
 
@@ -141,21 +141,21 @@ Please keep in mind that the charset declaration:
 - should be specified as early as possible (before any content that could be controlled by an attacker, such as a `title` element) in order to avoid a potential [encoding-related security issue](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7) in Internet Explorer
 
 ```html
-<html lang="en-us">
+<html lang='en-us'>
 	<!-- ... -->
 </html>
 ```
 
 ## IE Compatibility mode
 
-Internet Explorer supports the use of a document compatibility `meta`` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.
+Internet Explorer supports the use of a document compatibility `meta` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.
 
 For more information, [read this awesome Stack Overflow article](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e).
 
 Keep in mind that the tag for compatibility mode needs to be included [before all other tags](https://msdn.microsoft.com/en-us/library/cc288325.aspx) except for the `title` and the other `meta` tags.
 
 ```html
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv='X-UA-Compatible' content='IE=Edge' />
 ```
 
 ## Character encoding
@@ -164,7 +164,7 @@ Quickly and easily ensure proper rendering of your content by declaring an expli
 
 ```html
 <head>
-	<meta charset="UTF-8" />
+	<meta charset='UTF-8' />
 </head>
 ```
 

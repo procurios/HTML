@@ -6,6 +6,8 @@
 
 We've had numerous naming conventions aiming for consistent naming across developers. It's hard.
 
+## BEM
+
 Meet BEM. BEM, meaning _Block_, _Element_, _Modifier_, is a front-end methodology [coined by developers working at Yandex](https://tech.yandex.com/bem/). Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly and is adopted [from Harry Roberts guidelines](http://cssguidelin.es/#bem-like-naming).
 
 It is a very smart way of naming your CSS classes to give them more transparency and meaning to other developers. They are far more strict and informative, which makes the BEM naming convention _ideal for teams of developers on larger projects_ that might last a while. In other words: it exactly fits our needs at Procurios. It isn't a silver bullet, but sometimes feels like one.
@@ -51,6 +53,10 @@ Harry Roberts wrote [a great article explaining the BEM syntax](http://csswizard
 .person--female__hand {}
 .person__hand--left {}
 ```
+
+### BEMIT
+
+Harry Roberts has extended the BEM naming convention with namespaces and responsive suffixes. We don't use those concepts (yet), simply because we have no need to. Namespaces aren't an issue, as our platform focuses on independent, isolated and reusable Components. We solve responsiveness with element queries (read more about those in [our CSS style guide](https://github.com/procurios/CSS)).
 
 ## Text cases
 
@@ -146,6 +152,33 @@ Use `is-` or `has-` as suffix for states.
 .Menu--isHidden {}
 ```
 
-## BEMIT
+## File names
 
-Harry Roberts has extended the BEM naming convention with namespaces and responsive suffixes. We don't use those concepts (yet), simply because we have no need to. Namespaces aren't an issue, as our platform focuses on independent, isolated and reusable Components. We solve responsiveness with element queries (read more about those in [our CSS style guide](https://github.com/procurios/CSS)).
+Our goal is to move all output of our platform to self-contained, isolated Components. A typical file structure of a Component:
+
+```
+/FooComponent
+	/themes
+		/1
+			/FooComponent.html.twig
+			/FooComponent.css
+			/FooComponent.js
+```
+
+Please note that all root files have the name of the Component. If you split code into multiple files, use BEM in file names aswell:
+
+```
+/FooComponent
+	/themes
+		/1
+			/partials
+				FooComponent__bar.html.twig
+				FooComponent__baz.html.twig
+			/css
+				FooComponent.css
+				FooComponent__bar.css
+				FooComponent__baz.css
+			/FooComponent.html.twig
+```
+
+BEM works great as a model to name your files in any context. Apply the same file naming pattern if you (are unlucky enough to) work outside the context of a Component. Consistent naming rocks!

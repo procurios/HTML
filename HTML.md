@@ -135,11 +135,6 @@ Always include the `lang` attribute on the `html` tag. From the HTML5 spec:
 
 Read more about the `lang` attribute [in the spec](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element).
 
-Please keep in mind that the charset declaration:
-
-- must be included completely [within the first 1024 bytes of the document](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)
-- should be specified as early as possible (before any content that could be controlled by an attacker, such as a `title` element) in order to avoid a potential [encoding-related security issue](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7) in Internet Explorer
-
 ```html
 <html lang='en-us'>
 	<!-- ... -->
@@ -161,6 +156,11 @@ Keep in mind that the tag for compatibility mode needs to be included [before al
 ## Character encoding
 
 Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).
+
+Please keep in mind that the charset declaration:
+
+- must be included completely [within the first 1024 bytes of the document](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)
+- should be specified as early as possible (before any content that could be controlled by an attacker, such as a `title` element) in order to avoid a potential [encoding-related security issue](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7) in Internet Explorer
 
 ```html
 <head>

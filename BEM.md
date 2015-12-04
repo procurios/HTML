@@ -16,7 +16,7 @@ BEM splits classes into three groups:
 - `Element`: Represents a descendent of `Block` that helps form `Block` as a whole.
 - `Modifier`: A variant, different state or extension of the `Block`.
 
-To take an analogy (examples are CSS, obviously using the value of HTML class attributes):
+To take an analogy (examples are CSS, but this obviously applies to HTML as well):
 
 ```css
 .person {
@@ -52,6 +52,84 @@ Harry Roberts wrote [a great article explaining the BEM syntax](http://csswizard
 .person__hand--left {}
 ```
 
+## Text cases
+
+### Use **camelCase** to name your classes
+
+```html
+<!-- bad -->
+<div class='foo-bar'></div>
+<div class='foo_bar'></div>
+<div class='foo_bar--Baz'></div>
+<div class='foo_bar--baz'></div>
+<div class='FOOBAR'></div>
+
+<!-- good -->
+<div class='fooBar'></div>
+<div class='fooBar__baz'></div>
+<div class='fooBar__bazQux'></div>
+<div class='fooBar--baz'></div>
+<div class='fooBar--bazQux'></div>
+<div class='fooBar__bazQux--quux'></div>
+<div class='fooBar__bazQux--quuxCorge'></div>
+```
+
+### Use **PascalCase** to name the `Block` of a `Component`
+
+At Procurios isolated web components are conveniently named... `Component`. Mind the capital `C`. Use PascalCase to name the root `Block` of a the Component.
+
+```html
+<!-- bad -->
+<div class='fooComponent'></div>
+<div class='foo-component'></div>
+<div class='foo_component'></div>
+
+<!-- good -->
+<div class='FooComponent'></div>
+```
+
+## Syntax
+
+### Delimit `Element`s with two underscores
+
+```css
+/** bad */
+.FooComponent-footer {
+	...
+}
+
+.fooComponentFooter {
+	...
+}
+
+/** good */
+.FooComponent__footer {
+	...
+}
+```
+
+[↑ back to top](#table-of-contents)
+
+### Delimit `Modifier`s with two hyphens
+
+```css
+/** bad */
+.FooComponent-collapsed {
+	...
+}
+
+.collapsedFooComponent {
+	...
+}
+
+/** good */
+.FooComponent--collapsed {
+	...
+}
+```
+
+[↑ back to top](#table-of-contents)
+
 ## States
 
 Use `is-` or `has-` as suffix for states.
@@ -65,7 +143,7 @@ Use `is-` or `has-` as suffix for states.
 /** good */
 .Panel--isCollapsed {}
 .Panel--isCollapsing {}
-.Menu-isHidden {}
+.Menu--isHidden {}
 ```
 
 ## BEMIT

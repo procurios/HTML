@@ -104,3 +104,36 @@ Use the same indentation as the one used for the target language of the rendered
 	{# stuff #}
 {% endif %}
 ```
+
+## Splitting files
+
+Twig makes it very easy to split discrete chunks of code into their own file. A rule that forces developers to split files into multiple ones doesn't make much sense, but the least the style guide can do is to encourage you to consider it. If it eases readability, maintenance and interoperability: please do so.
+
+```twig
+<div class='FooComponent'>
+	{% include 'FooComponent__header.html.twig' %}
+</div>
+```
+
+### Don't use `block` and `extends`
+
+Twig allows defining one or more `block`s in a template. Blocks are used for inheritance and act as placeholders and replacements at the same time.
+
+```twig
+{# FooComponent.html.twig #}
+<div class='FooComponent'>
+	{% block header %}
+		{# optional default stuff #}
+	{% endblock %}
+</div>
+```
+
+```twig
+{# FooComponent__header.html.twig #}
+{% extends 'FooComponent.html.twig' %}
+{% block header %}
+	{# stuff replacing default stuff #}
+{% endblock %}
+```
+
+As a rule of thumb: don't use it. It quickly leads to complicated code and invisible dependencies. Instead, compose your component out of multiple smaller files and simply include them.

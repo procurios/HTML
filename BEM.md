@@ -42,9 +42,9 @@ To take an analogy (examples are CSS, but this obviously applies to HTML as well
 }
 ```
 
-Harry Roberts wrote [a great article explaining the BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). Some quotes:
+Harry Roberts wrote [a great article explaining the BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). A quote:
 
-> The point of BEM is to tell other developers more about what a piece of markup is doing from its name alone. By reading some HTML with some classes in, you can see how – if at all – the chunks are related; something might just be a component, something might be a child, or element, of that component, and something might be a variation or modifier of that component. To use an analogy/model, think how the following things and elements are related:
+> The point of BEM is to tell other developers more about what a piece of markup is doing from its name alone. By reading some HTML with some classes in, you can see how – if at all – the chunks are related; something might just be a component, something might be a child, or element, of that component, and something might be a variation or modifier of that component. Think how the following things and elements are related:
 
 ```css
 .person {}

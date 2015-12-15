@@ -56,7 +56,17 @@ Harry Roberts wrote [a great article explaining the BEM syntax](http://csswizard
 
 ### BEMIT
 
-Harry Roberts has extended the BEM naming convention with namespaces and responsive suffixes. We don't use those concepts (yet), simply because we have no need to. Namespaces aren't an issue, as our platform focuses on independent, isolated and reusable Components. We solve responsiveness with element queries (read more about those in [our CSS style guide](https://github.com/procurios/CSS)).
+Harry Roberts has extended the BEM naming convention with namespaces and responsive suffixes. We don't use those concepts (yet).
+
+#### Namespaces
+
+Namespaces are always an issue. Conflicting classnames can mess up layout in various unexpected ways. We don't use an explicit prefix or suffix to namespace classes, because we assume that our `Block` (Component) names are unique enough. The chance that two Components with the same name are used on the same page is small.
+
+That leads to the following question: do we add complexity to our naming convention or live with the fact that there's a small chance that two Components share the same namespace (which may result in unwanting side effects)? We choose the latter for now, and will reconsider based on proof.
+
+#### Responsiveness
+
+We solve responsiveness with element queries (read more about those in [our CSS style guide](https://github.com/procurios/CSS)).
 
 ## Text cases
 
